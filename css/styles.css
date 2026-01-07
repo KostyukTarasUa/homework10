@@ -310,14 +310,12 @@ margin-top: 9px;
 }
 
 .portfolio-cards-item {
-    width: 370px;
-    max-height: 404px;
     border: solid var(--portfolio-card-border);
     flex: 1 1 30%;
 }
 
 .portfolio-cards-item-image {
-    max-width: 370px;
+    height: 294px;
 }
 
 .portfolio-cards-item-image img {
@@ -327,7 +325,7 @@ margin-top: 9px;
 }
 
 .portfolio-cards-item-text {
-    margin: 20px 24px;
+    padding: 20px 24px;
     background-color: var(--main-color-white);
 }
 .portfolio-cards-item-text-top {
