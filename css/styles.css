@@ -42,6 +42,7 @@
     --active-color: #2196F3; 
     --header-underline: #ECECEC;
     --portfolio-card-border: #EEEEEE;
+    --portfolio-card-back: rgba(33, 150, 243, 0.898) 90%;
 }
 
 html,
@@ -316,6 +317,29 @@ margin-top: 9px;
 
 .portfolio-cards-item-image {
     height: 294px;
+    position: relative;
+}
+
+.portfolio-cards-item-image-back {
+    position: absolute;
+    inset: 0;
+    background: var(--portfolio-card-back);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.portfolio-cards-item:hover .portfolio-cards-item-image-back {
+    opacity: 1;
+}
+
+.portfolio-cards-item-image-back-text {
+    color: var(--main-color-white);
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 24px;
 }
 
 .portfolio-cards-item-image img {
