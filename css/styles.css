@@ -416,6 +416,12 @@ body {
     fill: currentColor;
 }
 
+.our-team-item-social-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .regular-customers {
     padding: 94px 0;
 }
@@ -517,6 +523,11 @@ margin-top: 9px;
     height: 20px;
     display: block;
     fill: currentColor;
+}
+
+.footer-social-item-list a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Portfolio */
