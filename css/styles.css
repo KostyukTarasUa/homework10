@@ -126,12 +126,16 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    display: none;
     background: var(--main-color-light-grey);
+    transform: translateY(40px);
+    visibility: hidden;
+    transition: transform 500ms ease, visibility 0ms linear 500ms;
 }
 
 .header-nav-main-list:hover>ul {
-    display: block;
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 500ms ease, visibility 0ms linear 0ms;
 }
 
 .header-nav-main-item-list {
@@ -149,12 +153,16 @@ body {
     top: 0;
     right: 100%;
     background: var(--main-color-light-grey);
-    display: none;
     padding-right: 20px;
+    transform: translateY(25px);
+    visibility: hidden;
+    transition: transform 500ms ease, visibility 0ms linear 500ms;
 }
 
 .header-nav-main-item-list:hover ul {
-    display: block;
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 500ms ease, visibility 0ms linear 0ms;
 }
 
 .header-nav-contacts {
@@ -396,10 +404,6 @@ body {
     gap: 10px;
 }
 
-.our-team-item-social-list {
-    
-}
-
 .our-team-item-social-list:hover a {
     background-color: var(--active-color);
     color: var(--main-color-white);
@@ -521,7 +525,7 @@ margin-top: 9px;
 }
 
 .footer-social-item-list a {
-     text-decoration: none;
+    text-decoration: none;
     color: inherit;
     width: 44px;
     height: 44px; 
@@ -541,6 +545,11 @@ margin-top: 9px;
     height: 20px;
     display: block;
     fill: currentColor;
+    transition: transform 650ms ease;
+}
+
+.footer-social-item-list:hover svg {
+    transform: scale(1.8);
 }
 
 .footer-social-item-list a {
@@ -589,6 +598,7 @@ margin-top: 9px;
 .portfolio-cards-item-image {
     height: 294px;
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-cards-item-image-back {
@@ -598,10 +608,13 @@ margin-top: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(100%);
     opacity: 0;
+    transition: transform 250ms ease;
 }
 
 .portfolio-cards-item:hover .portfolio-cards-item-image-back {
+    transform: translateY(0);
     opacity: 1;
 }
 
