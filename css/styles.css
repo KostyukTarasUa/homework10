@@ -70,7 +70,7 @@ body {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -186,6 +186,10 @@ body {
 .header-logo img {
     width: 145px;
     height: 31px;
+}
+
+.header-burger {
+    display: none;
 }
 
 /* main */
@@ -648,3 +652,181 @@ margin-top: 9px;
     color: var(--main-color-grey);
     line-height: 30px;
 }
+
+@media (max-width:1024px) {
+.header-nav {
+    margin-left: 50px;
+}
+
+.header-nav-main, .header-nav-contacts {
+    column-gap: 30px;
+}
+
+.header-nav-contacts {
+    display: none;
+}
+
+}
+
+@media (max-width:720px) {
+.title {
+    font-size: 28px;
+}
+
+    .header {
+    padding: 16px 0;
+}
+
+.header-nav {
+        display: none;
+    }
+
+.header-burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-burger::before,
+.header-burger::after,
+.header-burger span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--title-color);
+}
+
+.header-burger::after {
+    top: auto;
+    bottom: 0;
+}
+
+.header-burger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-container {
+    min-height: 500px;
+}
+
+.hero-title {
+    font-size: 35px;
+    max-width: 550px;
+    line-height: 50px;
+}
+
+.why-us-container {
+    margin-top: 60px;
+    flex-direction: column;
+}
+
+.why-us {
+    padding-bottom: 60px;
+}
+
+.why-us-items {
+    max-width: 700px;
+}
+
+.why-us-items-title {
+    text-align: center;
+}
+
+.what-are-we-doing  {
+    display: none;
+}
+
+.our-team-items {
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.our-team-item {
+    padding-bottom: 24px;
+}
+
+.our-team-item img {
+    width: 600px;
+    height: 650px;
+}
+
+.regular-customers {
+    display: none;
+}
+
+.footer-social {
+    display: none;
+}
+
+.footer {
+    padding: 62px 0;
+}
+
+.footer-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-image img {
+    width: 154px;
+    height: 28px;
+}
+
+.portfolio-filters {
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.portfolio-cards {
+    flex-direction: column;
+}
+
+.portfolio-cards-item-image-back {
+    opacity: 1;
+    background: rgba(0, 0, 0, .4);
+    transform: translateY(0);
+}
+
+}
+
+@media (max-width:480px) {
+.header-logo img {
+    width: 134px;
+    height: 28px;
+}
+
+.hero-container {
+    min-height: 400px;
+}
+
+.hero-title {
+    font-size: 26px;
+    max-width: 360px;
+    line-height: 42px;
+}
+
+.why-us-items {
+    max-width: 450px;
+}
+
+.our-team {
+    padding: 60px 0;
+}
+
+.our-team-item img {
+    width: 450px;
+    height: 460px;
+}
+
+
+
+}
+
+
